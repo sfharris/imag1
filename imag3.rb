@@ -9,6 +9,14 @@ class Image
     end
   end
 
+  def blur!(distance=1)
+    distance.times do
+      blur_coords!
+    end
+  end
+
+ private
+
  def blur_coords!
       blur_coords = []
       @rows.each_with_index do |row, i|
@@ -33,7 +41,6 @@ image = Image.new([
   [0, 0, 0, 0, 0, 0, 0, 1],
   [0, 1, 0, 0, 0, 0, 0, 0]
 ])
-
-image.blur_coords!
+image.blur!(1)
 
 image.output_image

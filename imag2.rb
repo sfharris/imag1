@@ -33,7 +33,6 @@ image = Image.new([
   [0, 0, 0, 0, 0, 0, 0, 1],
   [0, 1, 0, 0, 0, 0, 0, 0]
 ])
-
 image.blur_coords!
 
 image.output_image

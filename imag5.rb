@@ -33,7 +33,12 @@ image = Image.new([
   [0, 0, 0, 0, 0, 0, 0, 1],
   [0, 1, 0, 0, 0, 0, 0, 0]
 ])
-
 image.blur_coords!
 
 image.output_image
+
+# When an image is sent in do the following
+# 1) Find the location(index) of the `1` inside of the sub arrays
+# 2) Find the same index of the array before (if it exists)
+# 3) Find the index of the same array before and after (if it exists)
+# 4) Find the index of the array after (if it exists)
